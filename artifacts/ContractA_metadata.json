@@ -1,0 +1,58 @@
+{
+	"compiler": {
+		"version": "0.8.30+commit.73712a01"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"stateMutability": "payable",
+				"type": "constructor"
+			},
+			{
+				"inputs": [],
+				"name": "withdraw",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/Reentrancy/VulnerableVault1.sol": "ContractA"
+		},
+		"evmVersion": "prague",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/Reentrancy/VulnerableVault1.sol": {
+			"keccak256": "0xaf786be691495a76e02dd8609b0e187520e5cd79a013f13c4f038093d8911843",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://cf444b67970c0e364a17e7c62458c20c0ce789d67deb53baf369b64bc3704e3d",
+				"dweb:/ipfs/QmcPXga2tDERWAsiRoens7MoqsmJD4SNFcEcJezYu39NNq"
+			]
+		}
+	},
+	"version": 1
+}

@@ -1,0 +1,71 @@
+{
+	"compiler": {
+		"version": "0.8.30+commit.73712a01"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"stateMutability": "payable",
+				"type": "constructor"
+			},
+			{
+				"inputs": [],
+				"name": "getBalance",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "withdraw",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/Reentrancy/VulnerableVault1.sol": "VulnerableVault"
+		},
+		"evmVersion": "prague",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/Reentrancy/VulnerableVault1.sol": {
+			"keccak256": "0x0359f04c18637790b4412f7c68aae8f1ea077f69badc7180d7a30ddf66b3cebd",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://d341036d165334bb1843f7f36e8f162e4a25338acdf39761d002c5055744e8b5",
+				"dweb:/ipfs/QmYr7eX22ZQUX2PZDQzEwxCmM7BY4RHSVaYqFfXMp2Urbv"
+			]
+		}
+	},
+	"version": 1
+}
