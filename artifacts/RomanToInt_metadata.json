@@ -44,7 +44,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/task1/IntRomanChange.sol": "IntRomanChange"
+			"contracts/task1/RomanToInt.sol": "RomanToInt"
 		},
 		"evmVersion": "prague",
 		"libraries": {},
@@ -58,12 +58,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"contracts/task1/IntRomanChange.sol": {
-			"keccak256": "0x96b357e7642a8b7f3d82cbe1f540fa3af456986805274a741d56cdc856b56bb7",
+		"contracts/task1/RomanToInt.sol": {
+			"keccak256": "0xa7482b0e6416977d8ec649493ebd592f3e2f027c0b08e340ba94cc02b5795207",
 			"license": "GPL-3.0",
 			"urls": [
-				"bzz-raw://98982a1c42dcb0266e1749e9967bb500bb46014aee8c5571b8bc1c1c86f0d262",
-				"dweb:/ipfs/Qmdx7AMLEwspYS251DN6SUQfz5ZJuMByLyri6B7MF6a41h"
+				"bzz-raw://8fc49ea72452d5ef8976d2eb1092d45f9008161f8e15f5ee2dd3d8461ff51031",
+				"dweb:/ipfs/QmcNKSpZFv7T6sywi58e2fSkur2DgRBmspHhd5N1fbxP3F"
 			]
 		}
 	},

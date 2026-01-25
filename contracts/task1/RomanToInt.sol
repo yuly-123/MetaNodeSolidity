@@ -2,9 +2,9 @@
 pragma solidity >=0.8.2 <0.9.0;
 
 /**
- * 整数转罗马数字
+ * 罗马数字转整数
  */
-contract IntRomanChange {
+contract RomanToInt {
     // mapping(string => uint) private romanToInt; // 罗马字母到整数映射
     // mapping(string => uint) private romanToInt2;// 罗马字母到整数映射
     mapping(bytes1 => uint) private byteToInt;  // 罗马字母的字节到整数映射
