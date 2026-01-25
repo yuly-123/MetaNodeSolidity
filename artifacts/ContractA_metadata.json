@@ -31,7 +31,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/Reentrancy/VulnerableVault1.sol": "ContractA"
+			"contracts/Test.sol": "ContractA"
 		},
 		"evmVersion": "prague",
 		"libraries": {},
@@ -45,12 +45,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"contracts/Reentrancy/VulnerableVault1.sol": {
-			"keccak256": "0xaf786be691495a76e02dd8609b0e187520e5cd79a013f13c4f038093d8911843",
+		"contracts/Test.sol": {
+			"keccak256": "0xf3b38e9c7760af232440bf1a371beaa74bff93e17688c71f45f73a8b514fa808",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://cf444b67970c0e364a17e7c62458c20c0ce789d67deb53baf369b64bc3704e3d",
-				"dweb:/ipfs/QmcPXga2tDERWAsiRoens7MoqsmJD4SNFcEcJezYu39NNq"
+				"bzz-raw://e840f06e5df454d8635022121a96188ee7056c2fb8dfd0fe52058934a14251e3",
+				"dweb:/ipfs/QmPCTATScMSykpiKXQWoKhXCgdZP94XL1DdztV4xVu93wT"
 			]
 		}
 	},
