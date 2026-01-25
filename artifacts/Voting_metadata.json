@@ -1,0 +1,99 @@
+{
+	"compiler": {
+		"version": "0.8.30+commit.73712a01"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"name": "getCandidateArrays",
+				"outputs": [
+					{
+						"internalType": "address[]",
+						"name": "",
+						"type": "address[]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "candidate",
+						"type": "address"
+					}
+				],
+				"name": "getVotes",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "resetVotes",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "candidate",
+						"type": "address"
+					}
+				],
+				"name": "vote",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"notice": "创建一个名为Voting的合约，包含以下功能： 一个mapping，来存储候选人的得票数 一个vote函数，允许用户投票给某个候选人 一个getVotes函数，返回某个候选人的得票数 一个resetVotes函数，重置所有候选人的得票数",
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/task1/Voting.sol": "Voting"
+		},
+		"evmVersion": "prague",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/task1/Voting.sol": {
+			"keccak256": "0x0ca1fd5e29c3425a16b3a8d189a768bc0a38f6d011fb69ba1921720949e6717e",
+			"license": "GPL-3.0",
+			"urls": [
+				"bzz-raw://1ae26f97e7d569ce555f5fae70c81868d65abebc30ffdf28b2b62537f82a2f28",
+				"dweb:/ipfs/QmPRgwPs2UG9pXiZgEtyxHX4SGw9ADf79RK6kn3Uz6qE6o"
+			]
+		}
+	},
+	"version": 1
+}
