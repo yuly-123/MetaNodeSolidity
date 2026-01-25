@@ -1,0 +1,71 @@
+{
+	"compiler": {
+		"version": "0.8.30+commit.73712a01"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "s",
+						"type": "string"
+					}
+				],
+				"name": "change",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"notice": "整数转罗马数字",
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/task1/IntRomanChange.sol": "IntRomanChange"
+		},
+		"evmVersion": "prague",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/task1/IntRomanChange.sol": {
+			"keccak256": "0xf3c2f2ae702fa3cbcab8cd5031a3ebe8417be42db97ee4dd2ae24f80004b604d",
+			"license": "GPL-3.0",
+			"urls": [
+				"bzz-raw://61a35191c806de84831e7635951bcb46b005b2a43a7363c3aa573e8588160cd7",
+				"dweb:/ipfs/QmZPGEHpyP1Uw5P5xdApzZmLaAsXHbm4uG4renaiVHupr2"
+			]
+		}
+	},
+	"version": 1
+}
