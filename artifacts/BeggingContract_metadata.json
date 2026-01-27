@@ -223,11 +223,11 @@
 			]
 		},
 		"contracts/task2/BeggingContract.sol": {
-			"keccak256": "0xf49132629d2c986dedf23a8ad710e94c186c7a0fd6b5f9f1ea1f08c5d04b4e4c",
+			"keccak256": "0x7fe1bbb23194c5389d3bbc5809c7871632de0020b246d4b4f8e9434e04434076",
 			"license": "GPL-3.0",
 			"urls": [
-				"bzz-raw://8a23c183c9019a1e72add945c55f676ca90227ef35ad389c64cbaaedf7f34513",
-				"dweb:/ipfs/QmVwgf71UiN3ToPubv1cBDugmt1adSyhu3ma4YhMD4w1NE"
+				"bzz-raw://d985534c3196be7f13ccdb8f5a694afba6e5c7d825099cea6bc25bb137f47d2b",
+				"dweb:/ipfs/QmcYgaFZvFndGmt7mFLqQwuF5YFiorZJWW2krkVc3iyjnG"
 			]
 		}
 	},

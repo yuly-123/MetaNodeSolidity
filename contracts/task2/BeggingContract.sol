@@ -26,9 +26,16 @@ contract BeggingContract is Ownable {
 
     // 提取
     function withdraw() public onlyOwner {
-        payable(msg.sender).transfer(address(this).balance);
+        uint256 amount = address(this).balance;
 
-        emit WithdrawEvent(msg.sender, address(this).balance);
+        // 使用 Sepolia fork 环境调用会失败
+        // payable(msg.sender).transfer(amount);
+
+        // 使用 Sepolia fork 环境没有报错，合约账户余额清零，但钱包没有收到钱
+        (bool success, ) = payable(msg.sender).call{value: amount}("");
+        require(success, "call failed");
+
+        emit WithdrawEvent(msg.sender, amount);
     }
 
     // 查询
