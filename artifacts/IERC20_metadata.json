@@ -19,56 +19,7 @@
 					}
 				],
 				"name": "approve",
-				"outputs": [
-					{
-						"internalType": "bool",
-						"name": "",
-						"type": "bool"
-					}
-				],
-				"stateMutability": "nonpayable",
-				"type": "function"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "address",
-						"name": "account",
-						"type": "address"
-					}
-				],
-				"name": "balanceOf",
-				"outputs": [
-					{
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "address",
-						"name": "to",
-						"type": "address"
-					},
-					{
-						"internalType": "uint256",
-						"name": "amount",
-						"type": "uint256"
-					}
-				],
-				"name": "transfer",
-				"outputs": [
-					{
-						"internalType": "bool",
-						"name": "",
-						"type": "bool"
-					}
-				],
+				"outputs": [],
 				"stateMutability": "nonpayable",
 				"type": "function"
 			},
@@ -93,9 +44,9 @@
 				"name": "transferFrom",
 				"outputs": [
 					{
-						"internalType": "bool",
+						"internalType": "address",
 						"name": "",
-						"type": "bool"
+						"type": "address"
 					}
 				],
 				"stateMutability": "nonpayable",
@@ -110,12 +61,13 @@
 		"userdoc": {
 			"kind": "user",
 			"methods": {},
+			"notice": "1.部署SimpleToken合约 2.复制SimpleToken合约地址 3.部署TokenSwap合约同时填入复制的SimpleToken合约地址，界面上VALUE框中，选择Ether，输入10个。 4.调用SimpleToken合约的 approve 函数给 TokenSwap 合约地址授权\"1000000000000000000\"个。 5.调用TokenSwap合约的swap()函数，输入\"500000000000000000\"个。 6.查看日志decoded output：  {\t    \"0\": \"address: 0x5B38Da6a701c568545dCfcB03FcB875f56beddC4\", // 钱包账户地址\t    \"1\": \"address: 0x3328358128832A260C76A4141e19E2A943CD4B6D\"  // TokenSwap合约地址  }",
 			"version": 1
 		}
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/SimpleToken.sol": "IERC20"
+			"contracts/SimpleToken2.sol": "IERC20"
 		},
 		"evmVersion": "prague",
 		"libraries": {},
@@ -129,12 +81,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"contracts/SimpleToken.sol": {
-			"keccak256": "0x348d933502b8c29b5f943c24a8bc012929cfa25aa00342f31e9c01128a2e6196",
+		"contracts/SimpleToken2.sol": {
+			"keccak256": "0xe7fdbdd18c261cac12448f8dd9922ca477435a4fa9aa2ea59df195b49bd1cf65",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://8e37c0cacb44b22ddc732915dfc4e657dffe1ff802c2b9ee3496b38b6afbfae9",
-				"dweb:/ipfs/QmSv8tHNNsHTL8F9VRYh6irewbvQytP8tnjSx5491ihVoR"
+				"bzz-raw://39a8e04fb0c1d94f01ecdc3c7a29390bf16c94ab38b07507fb65a2d3c87924b8",
+				"dweb:/ipfs/QmabA9rGBtf7733YjP4u3qGzxodZrfM4gCcf4cigskJ2QD"
 			]
 		}
 	},

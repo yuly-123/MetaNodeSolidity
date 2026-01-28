@@ -9,80 +9,48 @@
 				"inputs": [
 					{
 						"internalType": "address",
-						"name": "_tokenA",
-						"type": "address"
-					},
-					{
-						"internalType": "address",
-						"name": "_tokenB",
+						"name": "_simpleToken",
 						"type": "address"
 					}
 				],
-				"stateMutability": "nonpayable",
+				"stateMutability": "payable",
 				"type": "constructor"
 			},
 			{
-				"anonymous": false,
-				"inputs": [
+				"inputs": [],
+				"name": "simpleToken",
+				"outputs": [
 					{
-						"indexed": true,
-						"internalType": "address",
-						"name": "user",
+						"internalType": "contract IERC20",
+						"name": "",
 						"type": "address"
-					},
-					{
-						"indexed": false,
-						"internalType": "uint256",
-						"name": "amountA",
-						"type": "uint256"
-					},
-					{
-						"indexed": false,
-						"internalType": "uint256",
-						"name": "amountB",
-						"type": "uint256"
 					}
 				],
-				"name": "Swap",
-				"type": "event"
+				"stateMutability": "view",
+				"type": "function"
 			},
 			{
 				"inputs": [
 					{
 						"internalType": "uint256",
-						"name": "amountA",
+						"name": "amount",
 						"type": "uint256"
 					}
 				],
 				"name": "swap",
-				"outputs": [],
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
 				"stateMutability": "nonpayable",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "tokenA",
-				"outputs": [
-					{
-						"internalType": "contract IERC20",
-						"name": "",
-						"type": "address"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "tokenB",
-				"outputs": [
-					{
-						"internalType": "contract IERC20",
-						"name": "",
-						"type": "address"
-					}
-				],
-				"stateMutability": "view",
 				"type": "function"
 			}
 		],
@@ -99,7 +67,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/SimpleToken.sol": "TokenSwap"
+			"contracts/SimpleToken2.sol": "TokenSwap"
 		},
 		"evmVersion": "prague",
 		"libraries": {},
@@ -113,12 +81,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"contracts/SimpleToken.sol": {
-			"keccak256": "0x348d933502b8c29b5f943c24a8bc012929cfa25aa00342f31e9c01128a2e6196",
+		"contracts/SimpleToken2.sol": {
+			"keccak256": "0xe7fdbdd18c261cac12448f8dd9922ca477435a4fa9aa2ea59df195b49bd1cf65",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://8e37c0cacb44b22ddc732915dfc4e657dffe1ff802c2b9ee3496b38b6afbfae9",
-				"dweb:/ipfs/QmSv8tHNNsHTL8F9VRYh6irewbvQytP8tnjSx5491ihVoR"
+				"bzz-raw://39a8e04fb0c1d94f01ecdc3c7a29390bf16c94ab38b07507fb65a2d3c87924b8",
+				"dweb:/ipfs/QmabA9rGBtf7733YjP4u3qGzxodZrfM4gCcf4cigskJ2QD"
 			]
 		}
 	},
