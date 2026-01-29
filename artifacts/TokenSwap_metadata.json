@@ -82,11 +82,11 @@
 	},
 	"sources": {
 		"contracts/SimpleToken2.sol": {
-			"keccak256": "0xe7fdbdd18c261cac12448f8dd9922ca477435a4fa9aa2ea59df195b49bd1cf65",
+			"keccak256": "0x687b7ad1c1f605f5243a97df87e3138aede742204a1d0c06c9a53e7649251912",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://39a8e04fb0c1d94f01ecdc3c7a29390bf16c94ab38b07507fb65a2d3c87924b8",
-				"dweb:/ipfs/QmabA9rGBtf7733YjP4u3qGzxodZrfM4gCcf4cigskJ2QD"
+				"bzz-raw://80a036c3a32f5b74fb2f8368d48d28c687dfccf531e700f903d216c439c310f9",
+				"dweb:/ipfs/QmR1vz1PSeCF6T9B9fjNu9xN8zFm7RB8UWD7mn5PFjdQCd"
 			]
 		}
 	},

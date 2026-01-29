@@ -61,7 +61,7 @@
 		"userdoc": {
 			"kind": "user",
 			"methods": {},
-			"notice": "1.部署SimpleToken合约 2.复制SimpleToken合约地址 3.部署TokenSwap合约同时填入复制的SimpleToken合约地址，界面上VALUE框中，选择Ether，输入10个。 4.调用SimpleToken合约的 approve 函数给 TokenSwap 合约地址授权\"1000000000000000000\"个。 5.调用TokenSwap合约的swap()函数，输入\"500000000000000000\"个。 6.查看日志decoded output：  {\t    \"0\": \"address: 0x5B38Da6a701c568545dCfcB03FcB875f56beddC4\", // 钱包账户地址\t    \"1\": \"address: 0x3328358128832A260C76A4141e19E2A943CD4B6D\"  // TokenSwap合约地址  }",
+			"notice": "1.部署SimpleToken合约 2.复制SimpleToken合约地址 3.部署TokenSwap合约同时填入复制的SimpleToken合约地址 4.调用SimpleToken合约的 approve 函数给 TokenSwap 合约地址授权\"1000000000000000000\"个。 5.调用TokenSwap合约的swap()函数，输入\"500000000000000000\"个。 6.查看日志decoded output：  {\t    \"0\": \"address: 0x5B38Da6a701c568545dCfcB03FcB875f56beddC4\", // 钱包账户地址\t    \"1\": \"address: 0x3328358128832A260C76A4141e19E2A943CD4B6D\"  // TokenSwap合约地址  }",
 			"version": 1
 		}
 	},
@@ -82,11 +82,11 @@
 	},
 	"sources": {
 		"contracts/SimpleToken2.sol": {
-			"keccak256": "0xe7fdbdd18c261cac12448f8dd9922ca477435a4fa9aa2ea59df195b49bd1cf65",
+			"keccak256": "0x687b7ad1c1f605f5243a97df87e3138aede742204a1d0c06c9a53e7649251912",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://39a8e04fb0c1d94f01ecdc3c7a29390bf16c94ab38b07507fb65a2d3c87924b8",
-				"dweb:/ipfs/QmabA9rGBtf7733YjP4u3qGzxodZrfM4gCcf4cigskJ2QD"
+				"bzz-raw://80a036c3a32f5b74fb2f8368d48d28c687dfccf531e700f903d216c439c310f9",
+				"dweb:/ipfs/QmR1vz1PSeCF6T9B9fjNu9xN8zFm7RB8UWD7mn5PFjdQCd"
 			]
 		}
 	},
