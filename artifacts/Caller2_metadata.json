@@ -8,8 +8,8 @@
 			{
 				"inputs": [
 					{
-						"internalType": "address payable",
-						"name": "_test",
+						"internalType": "address",
+						"name": "_testTemp",
 						"type": "address"
 					}
 				],
@@ -17,46 +17,35 @@
 				"type": "constructor"
 			},
 			{
-				"inputs": [],
-				"name": "pay1",
-				"outputs": [
-					{
-						"internalType": "bool",
-						"name": "",
-						"type": "bool"
-					},
+				"inputs": [
 					{
 						"internalType": "bytes",
-						"name": "",
+						"name": "b",
 						"type": "bytes"
 					}
 				],
-				"stateMutability": "payable",
+				"name": "getOrigin",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
 				"type": "function"
 			},
 			{
 				"inputs": [],
-				"name": "pay2",
-				"outputs": [],
-				"stateMutability": "payable",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "pay3",
+				"name": "getSender",
 				"outputs": [
 					{
-						"internalType": "bool",
+						"internalType": "address",
 						"name": "",
-						"type": "bool"
-					},
-					{
-						"internalType": "bytes",
-						"name": "",
-						"type": "bytes"
+						"type": "address"
 					}
 				],
-				"stateMutability": "payable",
+				"stateMutability": "view",
 				"type": "function"
 			}
 		],
@@ -73,7 +62,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/Transfer.sol": "Test"
+			"contracts/TestTemp.sol": "Caller2"
 		},
 		"evmVersion": "prague",
 		"libraries": {},
@@ -87,12 +76,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"contracts/Transfer.sol": {
-			"keccak256": "0x0554c06712f4e2c1e37cec71216c8190ac885e34ec9682ecd2fb39b3f251ffae",
+		"contracts/TestTemp.sol": {
+			"keccak256": "0xeb02f922b4f3f09c7ec368abcad8b3dca34bc655074faded69fcf8a8d7f7d3c6",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://191f22ad2c6b0f9b899db56a1a81e21fa3e6285b7acc308675027e52f0382c56",
-				"dweb:/ipfs/QmWCMnFBjtrsrtnSAnHxLeEvLWVNeLwwL92RCDcrPVDwvc"
+				"bzz-raw://c355e8f3adbcb3f627f07dd61cca5ab5b59787d0fd16be310f63772c0b25cb7a",
+				"dweb:/ipfs/QmPMQTXFjK6MvfZsKAN8dV5AcjSUfSwLLg3HiiERnCRQog"
 			]
 		}
 	},

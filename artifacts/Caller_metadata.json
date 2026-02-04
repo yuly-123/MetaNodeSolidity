@@ -1,34 +1,16 @@
 {
 	"compiler": {
-		"version": "0.8.19+commit.7dd6d404"
+		"version": "0.8.30+commit.73712a01"
 	},
 	"language": "Solidity",
 	"output": {
 		"abi": [
 			{
-				"inputs": [
-					{
-						"internalType": "address",
-						"name": "_contractA",
-						"type": "address"
-					}
-				],
-				"stateMutability": "nonpayable",
-				"type": "constructor"
-			},
-			{
 				"inputs": [],
-				"name": "attack",
-				"outputs": [],
-				"stateMutability": "payable",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "contractA",
+				"name": "getOrigin",
 				"outputs": [
 					{
-						"internalType": "contract ContractA",
+						"internalType": "address",
 						"name": "",
 						"type": "address"
 					}
@@ -37,8 +19,17 @@
 				"type": "function"
 			},
 			{
-				"stateMutability": "payable",
-				"type": "receive"
+				"inputs": [],
+				"name": "getSender",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
 			}
 		],
 		"devdoc": {
@@ -54,9 +45,9 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/Test.sol": "ContractB"
+			"contracts/TestTemp.sol": "Caller"
 		},
-		"evmVersion": "paris",
+		"evmVersion": "prague",
 		"libraries": {},
 		"metadata": {
 			"bytecodeHash": "ipfs"
@@ -68,12 +59,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"contracts/Test.sol": {
-			"keccak256": "0xf3b38e9c7760af232440bf1a371beaa74bff93e17688c71f45f73a8b514fa808",
+		"contracts/TestTemp.sol": {
+			"keccak256": "0xb21769e762421239b16534d72566d1d42a5e3253c361cb3138a383249e86ea58",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://e840f06e5df454d8635022121a96188ee7056c2fb8dfd0fe52058934a14251e3",
-				"dweb:/ipfs/QmPCTATScMSykpiKXQWoKhXCgdZP94XL1DdztV4xVu93wT"
+				"bzz-raw://758d6ac355a820d17ce8d0a34787724a5bfbba6b08324233826b81b145611192",
+				"dweb:/ipfs/Qme2fJmmuFNeaoyxeMsvQ1S5fWC4adX8uGHFYLDRgR6Kjd"
 			]
 		}
 	},
