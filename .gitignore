@@ -17,3 +17,5 @@ public/build/
 # OS generated
 .DS_Store
 Thumbs.db
+
+/artifacts
