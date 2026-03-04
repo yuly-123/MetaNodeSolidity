@@ -9,95 +9,27 @@
 				"anonymous": false,
 				"inputs": [
 					{
-						"indexed": false,
+						"indexed": true,
 						"internalType": "address",
-						"name": "s",
+						"name": "from",
 						"type": "address"
 					},
 					{
 						"indexed": false,
 						"internalType": "uint256",
-						"name": "v",
+						"name": "value",
 						"type": "uint256"
 					}
 				],
-				"name": "Fallbacked",
+				"name": "Input",
 				"type": "event"
 			},
 			{
-				"anonymous": false,
-				"inputs": [
-					{
-						"indexed": false,
-						"internalType": "address",
-						"name": "s",
-						"type": "address"
-					},
-					{
-						"indexed": false,
-						"internalType": "uint256",
-						"name": "v",
-						"type": "uint256"
-					}
-				],
-				"name": "Received",
-				"type": "event"
-			},
-			{
-				"stateMutability": "payable",
-				"type": "fallback"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "uint256",
-						"name": "amount",
-						"type": "uint256"
-					}
-				],
-				"name": "test1",
-				"outputs": [
-					{
-						"internalType": "bytes",
-						"name": "",
-						"type": "bytes"
-					},
-					{
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
-					}
-				],
-				"stateMutability": "pure",
+				"inputs": [],
+				"name": "show",
+				"outputs": [],
+				"stateMutability": "nonpayable",
 				"type": "function"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "uint256",
-						"name": "amount",
-						"type": "uint256"
-					}
-				],
-				"name": "test2",
-				"outputs": [
-					{
-						"internalType": "bytes",
-						"name": "",
-						"type": "bytes"
-					},
-					{
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
-					}
-				],
-				"stateMutability": "payable",
-				"type": "function"
-			},
-			{
-				"stateMutability": "payable",
-				"type": "receive"
 			}
 		],
 		"devdoc": {
@@ -108,13 +40,12 @@
 		"userdoc": {
 			"kind": "user",
 			"methods": {},
-			"notice": "payable、transfer、call、receive、fallback、转账相关功能演示。",
 			"version": 1
 		}
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/ReceiveAndFallback.sol": "TestTemp"
+			"contracts/TestTemp.sol": "TestTemp"
 		},
 		"evmVersion": "prague",
 		"libraries": {},
@@ -128,12 +59,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"contracts/ReceiveAndFallback.sol": {
-			"keccak256": "0x8ebb99d154597d5fab6174762584202710c683b710323f25f83bc1ab3ab83869",
+		"contracts/TestTemp.sol": {
+			"keccak256": "0x0bd13dfe99ae545376e2289dee10a47ea322af3920ded715f7ecde0f634be782",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://233309d2f5a46d6af690f629caf495b309ebd1597bd1c472336f478fd952e971",
-				"dweb:/ipfs/QmW8FffqDRzgX8Fbyve3bCUHGJQQ4W4ZQwmw9jw7XHg8Wd"
+				"bzz-raw://4b135e071b982199f19db71b4d0543d315d1b1eed777d463a8edca481b387164",
+				"dweb:/ipfs/QmWCrvXKHa9S3Fy18godzbMwxiEfv6a1pXci5zfS5hqekJ"
 			]
 		}
 	},

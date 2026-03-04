@@ -8,8 +8,8 @@
 			{
 				"inputs": [
 					{
-						"internalType": "address payable",
-						"name": "_testTemp",
+						"internalType": "address",
+						"name": "implementation_",
 						"type": "address"
 					}
 				],
@@ -17,27 +17,20 @@
 				"type": "constructor"
 			},
 			{
-				"inputs": [
-					{
-						"internalType": "bytes",
-						"name": "msgData",
-						"type": "bytes"
-					}
-				],
-				"name": "show",
+				"stateMutability": "payable",
+				"type": "fallback"
+			},
+			{
+				"inputs": [],
+				"name": "implementation",
 				"outputs": [
 					{
-						"internalType": "bool",
-						"name": "success",
-						"type": "bool"
-					},
-					{
-						"internalType": "bytes",
-						"name": "data",
-						"type": "bytes"
+						"internalType": "address",
+						"name": "",
+						"type": "address"
 					}
 				],
-				"stateMutability": "nonpayable",
+				"stateMutability": "view",
 				"type": "function"
 			}
 		],
@@ -54,7 +47,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/TestTemp.sol": "Caller"
+			"contracts/proxy/Proxy.sol": "Proxy"
 		},
 		"evmVersion": "prague",
 		"libraries": {},
@@ -68,12 +61,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"contracts/TestTemp.sol": {
-			"keccak256": "0x15c242f81d40743f8f726d257fc6a2b41d5ea6b7b1b619e47a63245272937711",
-			"license": "MIT",
+		"contracts/proxy/Proxy.sol": {
+			"keccak256": "0x74e25548619839476a9dbfd73107ca700057386484c7f9a9a32ff636b035c6e8",
+			"license": "GPL-3.0",
 			"urls": [
-				"bzz-raw://3e5ac2951ad01c23dcc616480645e255dbdb12fb96c965a3bb39f3452628ecf2",
-				"dweb:/ipfs/QmXr7RuG5ZTtUtG3EYXwncq7dPhLDEz22riNLEmpLLa6EP"
+				"bzz-raw://88e024153e9c25e4f1863e88041f99686c8084647f7c98e77b179c2b4e2dd66a",
+				"dweb:/ipfs/QmdF2yxqqzCupdPfZ3EzFNTGNi4ysGPn8wTw9nikWKR631"
 			]
 		}
 	},
