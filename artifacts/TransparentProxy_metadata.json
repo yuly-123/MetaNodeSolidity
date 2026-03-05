@@ -9,7 +9,7 @@
 				"inputs": [
 					{
 						"internalType": "address",
-						"name": "_contractA",
+						"name": "_implementation",
 						"type": "address"
 					}
 				],
@@ -17,28 +17,34 @@
 				"type": "constructor"
 			},
 			{
-				"inputs": [],
-				"name": "attack",
-				"outputs": [],
 				"stateMutability": "payable",
+				"type": "fallback"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "newImplementation",
+						"type": "address"
+					}
+				],
+				"name": "upgrade",
+				"outputs": [],
+				"stateMutability": "nonpayable",
 				"type": "function"
 			},
 			{
 				"inputs": [],
-				"name": "contractA",
+				"name": "words",
 				"outputs": [
 					{
-						"internalType": "contract ContractA",
+						"internalType": "string",
 						"name": "",
-						"type": "address"
+						"type": "string"
 					}
 				],
 				"stateMutability": "view",
 				"type": "function"
-			},
-			{
-				"stateMutability": "payable",
-				"type": "receive"
 			}
 		],
 		"devdoc": {
@@ -54,7 +60,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/Test.sol": "ContractB"
+			"contracts/ContractUpgrade/Transparent.sol": "TransparentProxy"
 		},
 		"evmVersion": "prague",
 		"libraries": {},
@@ -68,12 +74,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"contracts/Test.sol": {
-			"keccak256": "0xa4e69aa3e6de9afce0a120d47c43a15d12b8033dba77c34c4f086e3fe367891b",
-			"license": "MIT",
+		"contracts/ContractUpgrade/Transparent.sol": {
+			"keccak256": "0x2227f9c6a6f6b2a9d52788bbda2badbd64e4ba359bb6ba1a93ba26fb8de6af55",
+			"license": "GPL-3.0",
 			"urls": [
-				"bzz-raw://37fd169f101db71359577ba1adfe2c71d4d9ef6a9c13042bc835ba75d906c00e",
-				"dweb:/ipfs/QmRUFm1FCkuHQxxbwvYn8qhydWp9iogQuMs3bui3Xmf7qP"
+				"bzz-raw://8bc4533d3345a5ab7310954c0127786cc8f8152b8cbd937aa93cc52e5c3200c8",
+				"dweb:/ipfs/QmPva9uv3gXJbi62br4XRRyazr2rgJxksxe4AYkWX82G5c"
 			]
 		}
 	},

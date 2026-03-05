@@ -1,29 +1,10 @@
 {
 	"compiler": {
-		"version": "0.8.30+commit.73712a01"
+		"version": "0.8.34+commit.80d5c536"
 	},
 	"language": "Solidity",
 	"output": {
 		"abi": [
-			{
-				"anonymous": false,
-				"inputs": [
-					{
-						"indexed": true,
-						"internalType": "address",
-						"name": "from",
-						"type": "address"
-					},
-					{
-						"indexed": false,
-						"internalType": "uint256",
-						"name": "value",
-						"type": "uint256"
-					}
-				],
-				"name": "Input",
-				"type": "event"
-			},
 			{
 				"inputs": [],
 				"name": "selector1",
@@ -49,13 +30,6 @@
 				],
 				"stateMutability": "view",
 				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "show",
-				"outputs": [],
-				"stateMutability": "nonpayable",
-				"type": "function"
 			}
 		],
 		"devdoc": {
@@ -71,9 +45,9 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/TestTemp.sol": "TestTemp"
+			"contracts/ContractUpgrade/Upgrade.sol": "Foo"
 		},
-		"evmVersion": "prague",
+		"evmVersion": "osaka",
 		"libraries": {},
 		"metadata": {
 			"bytecodeHash": "ipfs"
@@ -85,12 +59,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"contracts/TestTemp.sol": {
-			"keccak256": "0xd16df1cc8fe942bd6a2dce1f21d1f7bb3785ec5c6ceb33bf0ad993e7bbd303e7",
-			"license": "MIT",
+		"contracts/ContractUpgrade/Upgrade.sol": {
+			"keccak256": "0x946cf533a3d3356d0d88f831ffb227e608a0e225f12629c1b81c9e8542e4fad7",
+			"license": "GPL-3.0",
 			"urls": [
-				"bzz-raw://5ed02af2fd342db3440ea4ba55618212b327e8d5b90a36412cbfbb3bedb5a7e1",
-				"dweb:/ipfs/QmXEe2YRsBim3t4iAiJtE5vLzDKNzWME666qjKMrRdEqmn"
+				"bzz-raw://4cc0ea40caa2dea6b04530b3608a1e4c9c1308dd6cae249ae7769c8340feec99",
+				"dweb:/ipfs/QmdXR2bZyATvV7x6u7cVk1xteXZuwW3ktMyNapqxngP6FX"
 			]
 		}
 	},
