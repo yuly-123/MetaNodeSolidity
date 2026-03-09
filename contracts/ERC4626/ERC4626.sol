@@ -1,38 +1,25 @@
-
-// SPDX-License-Identifier: MIT
-pragma solidity >=0.8.0;
+// SPDX-License-Identifier: GPL-3.0
+pragma solidity >=0.8.2 <0.9.0;
 
 import {IERC4626} from "./IERC4626.sol";
 import {ERC20, IERC20Metadata} from "@openzeppelin/contracts/token/ERC20/ERC20.sol";
 
 /**
- * @dev ERC4626 "代币化金库标准"合约，仅供教学使用，不要用于生产
+ * 代币化金库标准
  */
-contract ERC4626 is ERC20, IERC4626 {
-    /*//////////////////////////////////////////////////////////////
-                    状态变量
-    //////////////////////////////////////////////////////////////*/
-    ERC20 private immutable _asset; // 
+contract ERC4626 is ERC20, IERC4626
+{
+    ERC20 private immutable _asset;     // 基础资产合约地址
     uint8 private immutable _decimals;
 
-    constructor(
-        ERC20 asset_,
-        string memory name_,
-        string memory symbol_
-    ) ERC20(name_, symbol_) {
+    constructor(ERC20 asset_, string memory name_, string memory symbol_) ERC20(name_, symbol_) {
         _asset = asset_;
         _decimals = asset_.decimals();
-
     }
 
-    /** @dev See {IERC4626-asset}. */
     function asset() public view virtual override returns (address) {
         return address(_asset);
     }
-
-    /**
-     * See {IERC20Metadata-decimals}.
-     */
     function decimals() public view virtual override(IERC20Metadata, ERC20) returns (uint8) {
         return _decimals;
     }
@@ -40,7 +27,8 @@ contract ERC4626 is ERC20, IERC4626 {
     /*//////////////////////////////////////////////////////////////
                         存款/提款逻辑
     //////////////////////////////////////////////////////////////*/
-    /** @dev See {IERC4626-deposit}. */
+
+    // 存：按想存多少基础资产
     function deposit(uint256 assets, address receiver) public virtual returns (uint256 shares) {
         // 利用 previewDeposit() 计算将获得的金库份额
         shares = previewDeposit(assets);
@@ -52,8 +40,7 @@ contract ERC4626 is ERC20, IERC4626 {
         // 释放 Deposit 事件
         emit Deposit(msg.sender, receiver, assets, shares);
     }
-
-    /** @dev See {IERC4626-mint}. */
+    // 存：按想获得多少金库额度
     function mint(uint256 shares, address receiver) public virtual returns (uint256 assets) {
         // 利用 previewMint() 计算需要存款的基础资产数额
         assets = previewMint(shares);
@@ -66,35 +53,23 @@ contract ERC4626 is ERC20, IERC4626 {
         emit Deposit(msg.sender, receiver, assets, shares);
 
     }
-
-    /** @dev See {IERC4626-withdraw}. */
-    function withdraw(
-        uint256 assets,
-        address receiver,
-        address owner
-    ) public virtual returns (uint256 shares) {
+    function withdraw(uint256 assets, address receiver, address owner) public virtual returns (uint256 shares) {
         // 利用 previewWithdraw() 计算将销毁的金库份额
         shares = previewWithdraw(assets);
 
         // 如果调用者不是 owner，则检查并更新授权
         if (msg.sender != owner) {
-            _spendAllowance(owner, msg.sender, shares);
+            _spendAllowance(owner, msg.sender, shares); // 削减授权额度
         }
 
         // 先销毁后 transfer，防止重入
         _burn(owner, shares);
-        _asset.transfer(receiver, assets);
+        _asset.transfer(receiver, assets);  // 把msg.sender也就是当前合约的钱转给receiver。
 
         // 释放 Withdraw 函数
         emit Withdraw(msg.sender, receiver, owner, assets, shares);
     }
-
-    /** @dev See {IERC4626-redeem}. */
-    function redeem(
-        uint256 shares,
-        address receiver,
-        address owner
-    ) public virtual returns (uint256 assets) {
+    function redeem(uint256 shares, address receiver, address owner) public virtual returns (uint256 assets) {
         // 利用 previewRedeem() 计算能赎回的基础资产数额
         assets = previewRedeem(shares);
 
@@ -105,53 +80,45 @@ contract ERC4626 is ERC20, IERC4626 {
 
         // 先销毁后 transfer，防止重入
         _burn(owner, shares);
-        _asset.transfer(receiver, assets);
+        _asset.transfer(receiver, assets);  // 把msg.sender也就是当前合约的钱转给receiver。
 
-        // 释放 Withdraw 函数        
+        // 释放 Withdraw 函数
         emit Withdraw(msg.sender, receiver, owner, assets, shares);
     }
 
     /*//////////////////////////////////////////////////////////////
                             会计逻辑
     //////////////////////////////////////////////////////////////*/
-    /** @dev See {IERC4626-totalAssets}. */
+
     function totalAssets() public view virtual returns (uint256){
         // 返回合约中基础资产持仓
         return _asset.balanceOf(address(this));
     }
-
-    /** @dev See {IERC4626-convertToShares}. */
     function convertToShares(uint256 assets) public view virtual returns (uint256) {
         uint256 supply = totalSupply();
         // 如果 supply 为 0，那么 1:1 铸造金库份额
         // 如果 supply 不为0，那么按比例铸造
-        return supply == 0 ? assets : assets * supply / totalAssets();
+        return supply == 0 ? assets : assets * supply / totalAssets();  // 总代币1000 / 总持仓100 = 一个钱可以购买多少 10 个代币
     }
-
-    /** @dev See {IERC4626-convertToAssets}. */
     function convertToAssets(uint256 shares) public view virtual returns (uint256) {
         uint256 supply = totalSupply();
         // 如果 supply 为 0，那么 1:1 赎回基础资产
         // 如果 supply 不为0，那么按比例赎回
-        return supply == 0 ? shares : shares * totalAssets() / supply;
+        return supply == 0 ? shares : shares * totalAssets() / supply;  // 总持仓100 / 总代币1000 = 一个代币可以兑换多少 0.1 钱
     }
-
-    /** @dev See {IERC4626-previewDeposit}. */
+    // 存：基础资产 可以换取多少 金库额度
     function previewDeposit(uint256 assets) public view virtual returns (uint256) {
         return convertToShares(assets);
     }
-
-    /** @dev See {IERC4626-previewMint}. */
+    // 存：金库额度 可以换取多少 基础资产
     function previewMint(uint256 shares) public view virtual returns (uint256) {
         return convertToAssets(shares);
     }
-
-    /** @dev See {IERC4626-previewWithdraw}. */
+    // 取：基础资产 可以换取多少 金库额度
     function previewWithdraw(uint256 assets) public view virtual returns (uint256) {
         return convertToShares(assets);
     }
-
-    /** @dev See {IERC4626-previewRedeem}. */
+    // 取：金库额度 可以换取多少 基础资产
     function previewRedeem(uint256 shares) public view virtual returns (uint256) {
         return convertToAssets(shares);
     }
@@ -159,22 +126,20 @@ contract ERC4626 is ERC20, IERC4626 {
     /*//////////////////////////////////////////////////////////////
                      DEPOSIT/WITHDRAWAL LIMIT LOGIC
     //////////////////////////////////////////////////////////////*/
-    /** @dev See {IERC4626-maxDeposit}. */
+
+    // 存：基础资产
     function maxDeposit(address) public view virtual returns (uint256) {
         return type(uint256).max;
     }
-
-    /** @dev See {IERC4626-maxMint}. */
+    // 存：金库额度
     function maxMint(address) public view virtual returns (uint256) {
         return type(uint256).max;
     }
-    
-    /** @dev See {IERC4626-maxWithdraw}. */
+    // 取：基础资产
     function maxWithdraw(address owner) public view virtual returns (uint256) {
         return convertToAssets(balanceOf(owner));
     }
-    
-    /** @dev See {IERC4626-maxRedeem}. */
+    // 取：金库额度
     function maxRedeem(address owner) public view virtual returns (uint256) {
         return balanceOf(owner);
     }

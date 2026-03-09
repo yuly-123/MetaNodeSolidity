@@ -3,10 +3,10 @@ pragma solidity >=0.8.2 <0.9.0;
 
 import "@openzeppelin/contracts/token/ERC20/IERC20.sol";
 
-contract ERC20 is IERC20 {
-
-    mapping(address => uint256) public override balanceOf;
-    mapping(address => mapping(address => uint256)) public override allowance;
+contract ERC20 is IERC20
+{
+    mapping(address account => uint256 amount) public override balanceOf;   // 余额
+    mapping(address owner => mapping(address spender => uint256 amount)) public override allowance; // 授权
     uint256 public override totalSupply;// 代币总供给
     string public name;                 // 名称
     string public symbol;               // 符号
@@ -34,15 +34,11 @@ contract ERC20 is IERC20 {
     }
 
     // @dev 实现`transferFrom`函数，代币授权转账逻辑
-    function transferFrom(
-        address sender,
-        address recipient,
-        uint amount
-    ) external override returns (bool) {
-        allowance[sender][msg.sender] -= amount;
-        balanceOf[sender] -= amount;
+    function transferFrom(address owner, address recipient, uint amount) external override returns (bool) {
+        allowance[owner][msg.sender] -= amount;
+        balanceOf[owner] -= amount;
         balanceOf[recipient] += amount;
-        emit Transfer(sender, recipient, amount);
+        emit Transfer(owner, recipient, amount);
         return true;
     }
 
