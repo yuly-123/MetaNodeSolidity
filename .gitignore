@@ -19,6 +19,8 @@ public/build/
 Thumbs.db
 
 .git/
-
+.deps/
+.states/
+artifacts/
 
 
