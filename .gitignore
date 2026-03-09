@@ -18,8 +18,7 @@ public/build/
 .DS_Store
 Thumbs.db
 
-.deps/
 .git/
-.states/
-artifacts/
+
+
 
